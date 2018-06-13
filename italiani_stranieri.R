@@ -30,7 +30,7 @@ customPalette <- c(colors[4], colors[2], colors[5], colors[1], colors[6], colors
 
 # Plot
 ggplot(df, aes(x = x, y = y, fill = category)) + 
-  geom_tile(color = "white", size = 1) +
+  geom_tile(color = "white", size = 0.5) +
   coord_equal() +
   scale_x_continuous(expand = c(0, 0)) +
   scale_y_continuous(expand = c(0, 0), trans = 'reverse') +
@@ -38,7 +38,7 @@ ggplot(df, aes(x = x, y = y, fill = category)) +
   scale_fill_manual(breaks = rightOrd, values = customPalette) +
   labs(title = 'Italiani e stranieri in Italia (2016)',
        caption = 'Fonti: ilpost.it, ismu.org, ilsole24ore.com, lenius.it, unhcr.it\nrielaborato da un post di @maurovanetti') +
-  theme(panel.border = element_rect(color = "white",size = 1, fill = NA),
+  theme(panel.border = element_rect(color = "white", size = 1, fill = NA),
         plot.title = element_text(size = rel(1.2)),
         axis.text = element_blank(),
         axis.title = element_blank(),
